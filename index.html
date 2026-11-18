@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional landscaping, lawn care, and outdoor design services.">
-    <title>GreenScape Landscaping | Beautiful Outdoor Spaces</title>
+    <title>GreenScape Landscaping</title>
     <style>
+
+:root {
+    --forest-green: #244d32;
+    --leaf-green: #477a4d;
+    --soft-cream: #f5f8f3;
+    --warm-gold: #d6b879;
+    --charcoal: #333333;
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -356,6 +365,69 @@ nav a {
     color: #285b38;
 }
 
+/* PROJECT GALLERY */
+.gallery {
+    padding: 80px 8%;
+    background: #f5f8f3;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.14);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-info {
+    padding: 20px;
+}
+
+.gallery-info h3 {
+    color: #244d32;
+    margin-bottom: 8px;
+}
+
+.gallery-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* MOBILE GALLERY */
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        padding: 55px 6%;
+    }
+
+    .gallery-card img {
+        height: 240px;
+    }
+}
+
         @media (max-width: 700px) {
             header {
                 justify-content: center;
@@ -415,24 +487,76 @@ nav a {
         font-size: 13px;
     }
 }
+
+
+/* BRANDING UPGRADES */
+
+header {
+    background: var(--forest-green);
+}
+
+header h1 {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+header h1 span {
+    color: var(--warm-gold);
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--warm-gold);
+}
+
+/* Main website buttons */
+.button,
+button,
+.cta-button {
+    background: var(--leaf-green);
+    color: white;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+button:hover,
+.cta-button:hover {
+    background: var(--forest-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Section headings */
+.section-heading h2 {
+    color: var(--forest-green);
+}
+
+
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">🌿 GreenScape</div>
 
-      
-<nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="#contact">Contact</a>
-</nav>
+<header>
+    <h1 class="logo">
+        GreenScape <span>Landscaping</span>
+    </h1>
 
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
     <main>
         <section class="hero" id="home">
@@ -501,6 +625,72 @@ nav a {
             </div>
         </section>
 
+<!-- PROJECT GALLERY -->
+<section class="gallery" id="gallery">
+    <div class="section-heading">
+        <h2>Our Recent Projects</h2>
+        <p>Take a look at some of the outdoor spaces we've brought to life.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85"
+                 alt="Beautiful garden landscaping">
+            <div class="gallery-info">
+                <h3>Garden Transformation</h3>
+                <p>Garden design and planting</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85"
+                 alt="Green outdoor landscape">
+            <div class="gallery-info">
+                <h3>Outdoor Retreat</h3>
+                <p>Lawn and landscape improvement</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85"
+                 alt="Plants and garden greenery">
+            <div class="gallery-info">
+                <h3>Garden Installation</h3>
+                <p>Planting and garden features</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=85"
+                 alt="Well-maintained residential lawn">
+            <div class="gallery-info">
+                <h3>Lawn Refresh</h3>
+                <p>Lawn maintenance and care</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+                 alt="Landscaped outdoor garden">
+            <div class="gallery-info">
+                <h3>Landscape Design</h3>
+                <p>Custom outdoor design</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+                 alt="Beautiful home and outdoor setting">
+            <div class="gallery-info">
+                <h3>Residential Curb Appeal</h3>
+                <p>Exterior and landscape improvement</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- CUSTOMER TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
 
@@ -550,44 +740,37 @@ nav a {
 
 
 <!-- CONTACT AND QUOTE REQUEST FORM -->
-<section class="contact" id="contact">
 
+<section class="contact" id="contact">
     <div class="section-heading">
-        <h2>Let's Transform Your Outdoor Space</h2>
-        <p>
-            Tell us a little about your project.
-            We'll be happy to discuss your ideas.
-        </p>
+        <h2>Request a Free Quote</h2>
+        <p>Tell us about your landscaping project and we'll be in touch.</p>
     </div>
 
     <div class="quote-container">
 
-        <form id="quoteForm">
+        <form id="quoteForm"
+              action="https://formspree.io/f/xaeoovgq"
+              method="POST">
 
             <div class="form-row">
 
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your name"
-                        autocomplete="name"
-                        required
-                    >
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Your name"
+                           required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your email"
-                        autocomplete="email"
-                        required
-                    >
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Your email"
+                           required>
                 </div>
 
             </div>
@@ -596,65 +779,47 @@ nav a {
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Your phone number"
-                        autocomplete="tel"
-                    >
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="Your phone number">
                 </div>
 
                 <div class="form-group">
                     <label for="service">Service Needed</label>
-
                     <select id="service" name="service" required>
                         <option value="">Select a service</option>
-                        <option value="Lawn Maintenance">
-                            Lawn Maintenance
-                        </option>
-                        <option value="Landscape Design">
-                            Landscape Design
-                        </option>
-                        <option value="Garden Installation">
-                            Garden Installation
-                        </option>
-                        <option value="Other">
-                            Other
-                        </option>
+                        <option value="Lawn Maintenance">Lawn Maintenance</option>
+                        <option value="Landscape Design">Landscape Design</option>
+                        <option value="Garden Installation">Garden Installation</option>
+                        <option value="Other">Other</option>
                     </select>
-
                 </div>
 
             </div>
 
             <div class="form-group">
                 <label for="message">Tell Us About Your Project</label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    placeholder="Describe what you would like done..."
-                    required
-                ></textarea>
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Describe what you're looking for..."
+                          required></textarea>
             </div>
 
-            <button type="submit" class="button">
-                Request My Free Quote
-            </button>
+            <input type="hidden"
+                   name="_subject"
+                   value="New GreenScape Quote Request">
+
+            <button type="submit">Submit Quote Request</button>
 
             <p class="form-note">
-                This is a demonstration form. No information
-                is transmitted or stored yet.
+                Your information will be used to respond to your inquiry.
             </p>
-
-            <p id="formMessage" role="status" aria-live="polite"></p>
 
         </form>
 
     </div>
-
 </section>
 <!-- END CONTACT FORM -->
     </main>
@@ -663,22 +828,6 @@ nav a {
         <p>© 2026 GreenScape Landscaping. Demo website for portfolio use.</p>
     </footer>
 
-<script>
-    const quoteForm = document.getElementById("quoteForm");
-
-    quoteForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        const formMessage = document.getElementById("formMessage");
-
-        formMessage.textContent =
-            "Thank you! Your demonstration request was completed successfully.";
-
-        quoteForm.reset();
-
-    });
-</script>
 
 </body>
 </html>
