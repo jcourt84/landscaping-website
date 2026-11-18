@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | GreenScape Landscaping</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f8f3;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #244d32;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 span {
+            color: #d6b879;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            padding: 65px 20px 30px;
+        }
+
+        .gallery-heading h2 {
+            color: #244d32;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 20px auto 70px;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            color: #244d32;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #102b1d;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Enlarged photo viewer */
+        .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 50px 70px;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#photoCounter {
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.photo-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.photo-nav:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.prev-photo {
+    left: 15px;
+}
+
+.next-photo {
+    right: 15px;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        padding: 50px 15px;
+    }
+
+    .photo-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .prev-photo {
+        left: 5px;
+    }
+
+    .next-photo {
+        right: 5px;
+    }
+
+    .close-lightbox {
+        right: 15px;
+    }
+}
+
+        @media (max-width: 800px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-heading h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GreenScape <span>Landscaping</span></h1>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+    <div class="gallery-heading">
+        <h2>Our Recent Projects</h2>
+        <p>Explore outdoor spaces and landscaping inspiration.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85"
+                 alt="Garden landscaping">
+            <div class="gallery-info">
+                <h3>Garden Transformation</h3>
+                <p>Garden design and planting</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85"
+                 alt="Green outdoor landscape">
+            <div class="gallery-info">
+                <h3>Outdoor Retreat</h3>
+                <p>Lawn and landscape improvement</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85"
+                 alt="Plants and garden greenery">
+            <div class="gallery-info">
+                <h3>Garden Installation</h3>
+                <p>Planting and garden features</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=85"
+                 alt="Residential lawn">
+            <div class="gallery-info">
+                <h3>Lawn Refresh</h3>
+                <p>Lawn maintenance and care</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+                 alt="Landscaped outdoor garden">
+            <div class="gallery-info">
+                <h3>Landscape Design</h3>
+                <p>Custom outdoor design</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+                 alt="Beautiful home and outdoor setting">
+            <div class="gallery-info">
+                <h3>Residential Curb Appeal</h3>
+                <p>Exterior and landscape improvement</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close-lightbox" onclick="closePhoto()" aria-label="Close photo">
+        &times;
+    </button>
+
+    <button class="photo-nav prev-photo" onclick="changePhoto(-1)" aria-label="Previous photo">
+        &#10094;
+    </button>
+
+    <div class="lightbox-content">
+        <img id="largePhoto" src="" alt="Enlarged project photograph">
+        <p id="photoCounter">1 of 6</p>
+    </div>
+
+    <button class="photo-nav next-photo" onclick="changePhoto(1)" aria-label="Next photo">
+        &#10095;
+    </button>
+
+</div>
+
+<footer>
+    © 2026 GreenScape Landscaping. All Rights Reserved.
+</footer>
+
+<script>
+const photos = Array.from(document.querySelectorAll(".gallery-card img"));
+
+let currentPhotoIndex = 0;
+
+function showPhoto(index) {
+    currentPhotoIndex = (index + photos.length) % photos.length;
+
+    const selectedPhoto = photos[currentPhotoIndex];
+
+    document.getElementById("largePhoto").src = selectedPhoto.src;
+    document.getElementById("largePhoto").alt = selectedPhoto.alt;
+
+    document.getElementById("photoCounter").textContent =
+        `${currentPhotoIndex + 1} of ${photos.length}`;
+}
+
+photos.forEach((photo, index) => {
+    photo.addEventListener("click", function() {
+        showPhoto(index);
+        document.getElementById("lightbox").style.display = "flex";
+    });
+});
+
+function changePhoto(direction) {
+    showPhoto(currentPhotoIndex + direction);
+}
+
+function closePhoto() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+document.getElementById("lightbox").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closePhoto();
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    const lightbox = document.getElementById("lightbox");
+
+    if (lightbox.style.display !== "flex") {
+        return;
+    }
+
+    if (event.key === "Escape") {
+        closePhoto();
+    }
+
+    if (event.key === "ArrowRight") {
+        changePhoto(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        changePhoto(-1);
+    }
+});
+</script>
+
+</body>
+</html>
