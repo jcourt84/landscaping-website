@@ -59,35 +59,47 @@
             color: #b8e3a7;
         }
 
-        .hero {
-            min-height: 570px;
-            background:
-                linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
-                url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1800");
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 60px 20px;
-        }
+        
+.hero {
+    min-height: 650px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1800");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
 
-        .hero-content {
-            max-width: 750px;
-        }
+.hero-content {
+    max-width: 850px;
+}
 
-        .hero h1 {
-            font-size: clamp(38px, 6vw, 62px);
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
+.hero-tagline {
+    color: #b8df91;
+    font-size: 14px !important;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 22px !important;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
 
         .button {
             display: inline-block;
@@ -102,6 +114,30 @@
         .button:hover {
             background: #a3d383;
         }
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-secondary-button {
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.hero-secondary-button:hover {
+    background: white;
+    color: #173d29;
+}
 
         section {
             padding: 75px 8%;
@@ -122,28 +158,48 @@
             background: #f5f7f3;
         }
 
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
+        
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 28px;
+}
 
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,.07);
-        }
+.service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .service-card h3 {
-            color: #285b38;
-            margin-bottom: 12px;
-        }
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
 
-        .service-icon {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card-content {
+    padding: 25px;
+}
+
+.service-card h3 {
+    color: #285b38;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
 
         .about {
             display: grid;
@@ -559,16 +615,27 @@ button:hover,
 </header>
 
     <main>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>Beautiful Outdoor Spaces Start Here.</h1>
-                <p>
-                    Professional landscaping and lawn care
-                    that make your property stand out.
-                </p>
-                <a href="#contact" class="button">Request a Free Quote</a>
-            </div>
-        </section>
+        
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <p class="hero-tagline">PROFESSIONAL LANDSCAPING & LAWN CARE</p>
+
+        <h1>Transform Your Outdoor Space Into Something Beautiful.</h1>
+
+        <p>
+            From routine lawn maintenance to beautiful landscape
+            transformations, we help make your outdoor vision a reality.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#contact" class="button">Request a Free Quote</a>
+            <a href="#services" class="hero-secondary-button">Explore Our Services</a>
+        </div>
+
+    </div>
+</section>
+
 
         <section class="services" id="services">
             <div class="section-heading">
@@ -576,34 +643,53 @@ button:hover,
                 <p>Everything your outdoor space needs.</p>
             </div>
 
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>Lawn Maintenance</h3>
-                    <p>
-                        Keep your lawn looking clean, healthy,
-                        and beautiful throughout the season.
-                    </p>
-                </div>
+            
+<div class="service-grid">
 
-                <div class="service-card">
-                    <div class="service-icon">🌳</div>
-                    <h3>Landscape Design</h3>
-                    <p>
-                        Transform your outdoor space with
-                        thoughtful landscaping and design.
-                    </p>
-                </div>
+    <div class="service-card">
+        <img
+            src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900"
+            alt="Beautifully maintained green residential lawn"
+        >
+        <div class="service-card-content">
+            <h3>Lawn Maintenance</h3>
+            <p>
+                Keep your property looking its best with professional
+                lawn mowing, edging, and seasonal lawn care.
+            </p>
+        </div>
+    </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🌸</div>
-                    <h3>Garden Installation</h3>
-                    <p>
-                        Add color and character with beautiful
-                        flowers, plants, and garden features.
-                    </p>
-                </div>
-            </div>
+    <div class="service-card">
+        <img
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900"
+            alt="Professionally designed garden and landscape"
+        >
+        <div class="service-card-content">
+            <h3>Landscape Design</h3>
+            <p>
+                Transform your outdoor space with thoughtful designs
+                that enhance your property's beauty and curb appeal.
+            </p>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img
+            src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?w=900"
+            alt="Green plants and garden landscaping"
+        >
+        <div class="service-card-content">
+            <h3>Garden Installation</h3>
+            <p>
+                Add color and character to your property with beautiful
+                flowers, plants, and attractive garden features.
+            </p>
+        </div>
+    </div>
+
+</div>
+
         </section>
 
         <section class="about" id="about">
